@@ -1,6 +1,6 @@
 # CF Flux Remix
 
-CF Flux Remix 是一个基于 Cloudflare Workers 和 Remix 框架的图像生成应用。它利用 Cloudflare 的 AI 模型来生成图像，并提供了一个用户友好的界面和 API 接口来与这些模型进行交互。
+CF Flux Remix 是一个基于 Cloudflare Workers 和 Remix 框架的图像生成应用。它利用 Cloudflare 的 AI 模型来生成图像，并提供了一个用户友好的界面和 API 接口来与这些模型进行交互。 Test!
 
 ## 功能特点
 
