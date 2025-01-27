@@ -29,6 +29,6 @@ EXTERNAL_API_KEY = ""
 FLUX_NUM_STEPS = "6"
 CUSTOMER_MODEL_MAP = '''{
     "FLUX.1-Schnell-CF":"@cf/black-forest-labs/flux-1-schnell",
-   
+    "SD-XL-Bash-CF":"@cf/stabilityai/stable-diffusion-xl-base-1.0",
 }'''
 getme = "测试专用"
