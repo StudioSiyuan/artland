@@ -182,24 +182,7 @@ const GenerateImage: FC = () => {
           <div className="mt-8">
             <h2 className="text-2xl font-bold text-white mb-4">Image Generated：</h2>
             <img src={`data:image/jpeg;base64,${actionData.image}`} alt="Generated Image" className="w-full rounded-xl shadow-lg" />
-          </div>
-
-
-           <div className="mt-8">
-    <h2 className="text-2xl font-bold text-white mb-4">Image Generated：</h2>
-    <img
-      src={`data:image/jpeg;base64,${actionData.image}`}
-      alt="Generated Image"
-      className="w-full rounded-xl shadow-lg"
-    />
-    <a
-      href={`data:image/jpeg;base64,${actionData.image}`}
-      download="generated-image.jpg"
-      className="mt-4 inline-block px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 transition duration-300"
-    >
-      Download Image
-    </a>
-  </div>
+          </div>          
       
       
         )}
