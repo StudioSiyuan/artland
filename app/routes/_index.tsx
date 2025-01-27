@@ -157,7 +157,7 @@ const GenerateImage: FC = () => {
                           ${enhance ? "bg-gradient-to-r from-green-400 to-green-600" : "bg-gradient-to-r from-gray-400 to-gray-600"}`}
               disabled={isSubmitting}
             >
-              {enhance ? "Prompt Improved" : "Improve Your Prompt"}
+              {enhance ? "Prompt Improved" : "Improve Prompt"}
             </button>
             <input type="hidden" name="enhance" value={enhance.toString()} />
             <button
