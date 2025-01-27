@@ -111,13 +111,13 @@ const GenerateImage: FC = () => {
               value={prompt}
               onChange={handlePromptChange}
               className="w-full px-5 py-3 rounded-xl border border-transparent focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-white bg-opacity-20 text-white placeholder-white placeholder-opacity-70 transition duration-300 ease-in-out hover:bg-opacity-30"
-              placeholder="请输入您的提示词..."
+              placeholder="Write your description here..."
               required
             />
           </div>
           <div>
             <label htmlFor="model" className="block text-white text-lg font-semibold mb-3">
-              选择模型：
+              Select Model：
             </label>
             <select
               id="model"
@@ -135,7 +135,7 @@ const GenerateImage: FC = () => {
           </div>
           <div>
             <label htmlFor="size" className="block text-white text-lg font-semibold mb-3">
-              图片尺寸：
+              Image Size：
             </label>
             <select
               id="size"
@@ -151,7 +151,7 @@ const GenerateImage: FC = () => {
           </div>
           <div>
             <label htmlFor="numSteps" className="block text-white text-lg font-semibold mb-3">
-              生成步数：
+              Generation Steps：
             </label>
             <input
               type="number"
@@ -172,7 +172,7 @@ const GenerateImage: FC = () => {
                           ${enhance ? "bg-gradient-to-r from-green-400 to-green-600" : "bg-gradient-to-r from-gray-400 to-gray-600"}`}
               disabled={isSubmitting}
             >
-              {enhance ? "已强化提示词" : "是否强化提示词"}
+              {enhance ? "Prompt Improved" : "Improve Your Prompt"}
             </button>
             <input type="hidden" name="enhance" value={enhance.toString()} />
             <button
@@ -181,7 +181,7 @@ const GenerateImage: FC = () => {
               className="flex-1 px-5 py-3 rounded-xl text-lg font-semibold text-white bg-gradient-to-r from-yellow-400 to-yellow-600 transition transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-yellow-400"
               disabled={isSubmitting}
             >
-              重置
+              Reset
             </button>
             <button
               type="submit"
@@ -189,13 +189,13 @@ const GenerateImage: FC = () => {
                           ${isSubmitting ? "bg-gray-500 cursor-not-allowed" : "bg-gradient-to-r from-indigo-500 to-indigo-700"}`}
               disabled={isSubmitting}
             >
-              {isSubmitting ? "生成中..." : "提交"}
+              {isSubmitting ? "Processing..." : "Submit"}
             </button>
           </div>
         </Form>
         {actionData && actionData.image && (
           <div className="mt-8">
-            <h2 className="text-2xl font-bold text-white mb-4">生成的图片：</h2>
+            <h2 className="text-2xl font-bold text-white mb-4">Image Generated：</h2>
             <img src={`data:image/jpeg;base64,${actionData.image}`} alt="Generated Image" className="w-full rounded-xl shadow-lg" />
           </div>
         )}
