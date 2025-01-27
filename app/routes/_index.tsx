@@ -29,12 +29,12 @@ export const action: ActionFunction = async ({ request, context }: { request: Re
   console.log("Form data:", { prompt, enhance, modelId, size, numSteps });
 
   if (!prompt) {
-    return json({ error: "未找到提示词" }, { status: 400 });
+    return json({ error: "no prompt found" }, { status: 400 });
   }
 
   const model = config.CUSTOMER_MODEL_MAP[modelId];
   if (!model) {
-    return json({ error: "无效的模型" }, { status: 400 });
+    return json({ error: "wrong model" }, { status: 400 });
   }
 
   try {
@@ -47,11 +47,11 @@ export const action: ActionFunction = async ({ request, context }: { request: Re
     console.log("Image generation successful");
     return json(result);
   } catch (error) {
-    console.error("生成图片时出错:", error);
+    console.error("generation error:", error);
     if (error instanceof AppError) {
-      return json({ error: `生成图片失败: ${error.message}` }, { status: error.status || 500 });
+      return json({ error: `generation failed: ${error.message}` }, { status: error.status || 500 });
     }
-    return json({ error: "生成图片失败: 未知错误" }, { status: 500 });
+    return json({ error: "generation failed: unknown error" }, { status: 500 });
   }
 };
 
@@ -60,7 +60,7 @@ const GenerateImage: FC = () => {
   const [prompt, setPrompt] = useState("");
   const [enhance, setEnhance] = useState(false);
   const [model, setModel] = useState(config.CUSTOMER_MODEL_MAP["FLUX.1-Schnell-CF"]);
-  const [size, setSize] = useState("1024x1024");
+  const [size, setSize] = useState("1024x1024");    
   const [numSteps, setNumSteps] = useState(config.FLUX_NUM_STEPS);
   const actionData = useActionData<typeof action>();
   const navigation = useNavigation();
@@ -133,22 +133,7 @@ const GenerateImage: FC = () => {
               ))}
             </select>
           </div>
-          <div>
-            <label htmlFor="size" className="block text-white text-lg font-semibold mb-3">
-              Image Size：
-            </label>
-            <select
-              id="size"
-              name="size"
-              value={size}
-              onChange={(e) => setSize(e.target.value)}
-              className="w-full px-5 py-3 rounded-xl border border-transparent focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-white bg-opacity-20 text-white transition duration-300 ease-in-out hover:bg-opacity-30"
-            >
-              <option value="512x512">512x512</option>
-              <option value="768x768">768x768</option>
-              <option value="1024x1024">1024x1024</option>
-            </select>
-          </div>
+         
           <div>
             <label htmlFor="numSteps" className="block text-white text-lg font-semibold mb-3">
               Generation Steps：
