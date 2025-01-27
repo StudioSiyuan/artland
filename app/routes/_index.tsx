@@ -168,7 +168,6 @@ const GenerateImage: FC = () => {
         </Form>
         {actionData && actionData.image && (
           <div className="mt-8">
-            <h2 className="text-2xl font-bold text-white mb-4">Image Generated：</h2>
             <img src={`data:image/jpeg;base64,${actionData.image}`} alt="Generated Image" className="w-full rounded-lg shadow-lg" />
           </div>          
       
