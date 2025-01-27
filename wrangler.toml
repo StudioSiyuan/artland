@@ -28,9 +28,7 @@ EXTERNAL_MODEL = ""
 EXTERNAL_API_KEY = ""
 FLUX_NUM_STEPS = "6"
 CUSTOMER_MODEL_MAP = '''{
-    "FLUX.1-Schnell-CF":"@cf/black-forest-labs/flux-1-schnell",
-    "DS-8-CF":"@cf/lykon/dreamshaper-8-lcm",
-    "SD-XL-Bash-CF":"@cf/stabilityai/stable-diffusion-xl-base-1.0",
+    "FLUX.1-Schnell-CF":"@cf/black-forest-labs/flux-1-schnell",     
     "SD-XL-Lightning-CF":"@cf/bytedance/stable-diffusion-xl-lightning"
 }'''
 getme = "测试专用"
