@@ -98,7 +98,7 @@ const GenerateImage: FC = () => {
       <div className="relative bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-lg shadow-2xl p-10 max-w-2xl w-full">
        
         <div>
-          <a href="https://www.example.com">访问Example.com</a>
+          <a href="https://aiartland.com">aiArtland Home</a>
         </div>
         
         <h1 className="text-4xl font-extrabold text-white mb-8 text-center drop-shadow-lg">
