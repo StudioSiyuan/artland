@@ -107,7 +107,7 @@ const GenerateImage: FC = () => {
             
 
             <textarea name="message" placeholder="请在这里输入您的消息">   
-              style={{ width: '100%', height: 'auto' }} // 样式可以根据需要调整
+             
             </textarea>
 
 
