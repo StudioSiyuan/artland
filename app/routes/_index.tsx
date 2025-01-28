@@ -104,6 +104,14 @@ const GenerateImage: FC = () => {
             <label htmlFor="prompt" className="block text-white text-lg font-semibold mb-3">
               What is in your mind：
             </label>
+            
+
+            <textarea name="message" rows="4" 
+              placeholder="请在这里输入您的消息">            
+            </textarea>
+
+
+            
             <input
               type="text"
               id="prompt"
