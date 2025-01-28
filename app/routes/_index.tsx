@@ -96,6 +96,11 @@ const GenerateImage: FC = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 ... px-4">
       <div className="relative bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-lg shadow-2xl p-10 max-w-2xl w-full">
+       
+        <div>
+          <a href="https://www.example.com">访问Example.com</a>
+        </div>
+        
         <h1 className="text-4xl font-extrabold text-white mb-8 text-center drop-shadow-lg">
           AiArtland Canvas
         </h1>
