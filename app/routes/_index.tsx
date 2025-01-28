@@ -108,9 +108,6 @@ const GenerateImage: FC = () => {
            
                   
             
-
-
-            
             <textarea name="prompt"> 
               id="prompt"
               value={prompt}
@@ -119,7 +116,6 @@ const GenerateImage: FC = () => {
               placeholder="Write your description here..."
               required
             </textarea>
-
 
 
             
