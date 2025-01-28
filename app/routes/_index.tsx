@@ -103,17 +103,15 @@ const GenerateImage: FC = () => {
           <div>
             <label htmlFor="prompt" className="block text-white text-lg font-semibold mb-3">
               What is in your mind：
-            </label>
+            </label>          
+
+           
+                  
             
 
-            <textarea name="message" rows="4" 
-              placeholder="请在这里输入您的消息">            
-            </textarea>
-
 
             
-            <input
-              type="text"
+             <textarea name="message" rows="30" 
               id="prompt"
               name="prompt"
               value={prompt}
@@ -121,7 +119,11 @@ const GenerateImage: FC = () => {
               className="w-full px-5 py-3 rounded-lg border border-transparent focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-white bg-opacity-20 text-white placeholder-white placeholder-opacity-70 transition duration-300 ease-in-out hover:bg-opacity-30"
               placeholder="Write your description here..."
               required
-            />
+            </textarea>
+
+
+
+            
           </div>
 
            <div>
