@@ -138,15 +138,8 @@ const GenerateImage: FC = () => {
          
           
           <div className="flex flex-col sm:flex-row justify-between space-y-4 sm:space-y-0">
-            <button
-              type="button"
-              onClick={handleEnhanceToggle}
-              className={`flex-1 px-5 py-3 rounded-lg text-lg font-semibold text-white transition transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-400
-                          ${enhance ? "bg-gradient-to-r from-green-400 to-green-600" : "bg-gradient-to-r from-gray-400 to-gray-600"}`}
-              disabled={isSubmitting}
-            >
-              {enhance ? "Prompt Improved" : "Improve Prompt"}
-            </button>
+            
+            
             <input type="hidden" name="enhance" value={enhance.toString()} />
             <button
               type="button"
