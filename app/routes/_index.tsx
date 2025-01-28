@@ -106,8 +106,7 @@ const GenerateImage: FC = () => {
             </label>
             
 
-            <textarea name="message" rows="4" 
-              placeholder="请在这里输入您的消息">            
+            <textarea name="message" placeholder="请在这里输入您的消息">            
             </textarea>
 
 
