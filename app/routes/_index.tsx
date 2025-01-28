@@ -111,7 +111,7 @@ const GenerateImage: FC = () => {
 
 
             
-             <textarea name="prompt"> 
+            <textarea name="prompt"> 
               id="prompt"
               value={prompt}
               onChange={handlePromptChange}
