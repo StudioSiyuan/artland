@@ -58,7 +58,7 @@ export const action: ActionFunction = async ({ request, context }: { request: Re
 const GenerateImage: FC = () => {
   const { models, config } = useLoaderData<typeof loader>();
   const [prompt, setPrompt] = useState("");
-  const [enhance, setEnhance] = useState(false);
+  const [enhance, setEnhance] = useState(true);
   const [model, setModel] = useState(config.CUSTOMER_MODEL_MAP["FLUX.1-Schnell-CF"]);
   const [size, setSize] = useState("1024x1024");    
   const [numSteps, setNumSteps] = useState(config.FLUX_NUM_STEPS);
@@ -73,7 +73,7 @@ const GenerateImage: FC = () => {
 
   const handleReset = () => {
     setPrompt("");
-    setEnhance(false);
+    setEnhance(true);
     setModel(config.CUSTOMER_MODEL_MAP["FLUX.1-Schnell-CF"]);
     setSize("1024x1024");
     setNumSteps(config.FLUX_NUM_STEPS);
