@@ -115,8 +115,7 @@ const GenerateImage: FC = () => {
               value={prompt}
               onChange={handlePromptChange}
               className="w-full px-5 py-3 rounded-lg border border-transparent focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-white bg-opacity-20 text-white placeholder-white placeholder-opacity-70 transition duration-300 ease-in-out hover:bg-opacity-30"
-              placeholder="Write your description here..."
-              rows="4"  {/* 设置显示的行数 */}
+              placeholder="Write your description here..."              
               required
             />
             
